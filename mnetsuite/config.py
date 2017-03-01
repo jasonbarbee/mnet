@@ -63,6 +63,7 @@ class mnet_config:
 		self.snmp_creds			= json_data['snmp']
 		self.exclude_subnets	= json_data['exclude']
 		self.allowed_subnets	= json_data['subnets']
+		#self.exclude_filter 	= json_data['filter']
 
 		json_graph = json_data.get('graph', None)
 		if (json_graph != None):
