@@ -223,6 +223,10 @@ class mnet_graph:
 			if (self.is_node_allowed(n.remote_ip) == 0):
 				continue
 
+			# Bypass for Cisco Phones
+			if (n.remote_name.startswith('SEP')):
+				continue
+
 			# get the child info
 			if (n.remote_ip != 'UNKNOWN'):
 				child = self._get_node(n.remote_ip, depth+1, n.discovered_proto)
